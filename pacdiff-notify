@@ -1,0 +1,17 @@
+#!/bin/bash
+
+RESET="$(tput sgr0)"
+BOLD="$(tput bold)"
+YELLOW="${BOLD}$(tput setaf 3)"
+CYAN="${BOLD}$(tput setaf 6)"
+RED="${BOLD}$(tput setaf 1)"
+
+mapfile -t pending < <(pacdiff -o 2>/dev/null)
+
+[[ ${#pending[@]} -eq 0 ]] && exit 0
+
+echo "${YELLOW}==> WARNING: ${#pending[@]} .pacnew file(s) pending review${RESET}"
+for f in "${pending[@]}"; do
+    echo "  ${CYAN}->${RESET} ${f%.pacnew}"
+done
+echo "${BOLD}==> Run ${RED}pacdiff${RESET}${BOLD} (or ${RED}sudo pacdiff${RESET}${BOLD}) to merge changes${RESET}"

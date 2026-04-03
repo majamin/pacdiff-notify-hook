@@ -1,0 +1,15 @@
+pkgbase = pacdiff-notify-hook
+	pkgdesc = Pacman hook that lists pending .pacnew files
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://github.com/majamin/pacdiff-notify-hook
+	arch = any
+	license = MIT
+	depends = pacman-contrib
+	conflicts = pacdiff-pacman-hook-git
+	source = pacdiff-notify
+	source = pacdiff-notify.hook
+	sha256sums = d3518fbaf8f603e515b79a032ea867336af521eeaf950a9b0a17277e7522530d
+	sha256sums = 6d806c3390fdfe692f9d4a1cfecd2adea77de39c3431c9ea250a53e836431abb
+
+pkgname = pacdiff-notify-hook
