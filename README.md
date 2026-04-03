@@ -5,15 +5,7 @@ provides follow-up suggestions.
 
 # Sample output
 
-```
-:: Running post-transaction hooks...
-(1/3) Arming ConditionNeedsUpdate...
-(2/3) Checking for .pacnew files...
-==> WARNING: 2 .pacnew file(s) pending review
-  -> /etc/bluetooth/main.conf
-  -> /etc/pacman.d/mirrorlist
-==> Run pacdiff (or sudo pacdiff) to merge changes
-```
+![Screenshot](screenshot.png)
 
 # Purpose
 
